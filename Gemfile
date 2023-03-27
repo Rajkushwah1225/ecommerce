@@ -70,10 +70,9 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
-gem 'sass-rails'
-#gem 'rails','6.0.2.1'
-#gem 'bootstrap-sass', '3.4.1'
-#gem 'puma','3.12.2'
-#gem 'bootstrap-sass', '3.2.0.2'
+#gem 'sass-rails'
 gem 'bootstrap-sass'
 gem 'rails-controller-testing'
+gem 'rubocop-rails', require: false
+
+gem 'guard'
