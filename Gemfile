@@ -71,8 +71,12 @@ group :test do
   gem "webdrivers"
 end
 #gem 'sass-rails'
-gem 'bootstrap-sass'
-gem 'rails-controller-testing'
-gem 'rubocop-rails', require: false
+gem "bootstrap-sass"
+gem "rails-controller-testing"
+gem "rubocop-rails", require: false
 
-gem 'guard'
+gem "guard"
+gem "minitest", group: :test
+gem "minitest-reporters", group: :test
+gem "rufo"
+gem "bcrypt"
