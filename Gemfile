@@ -80,3 +80,5 @@ gem "minitest", group: :test
 gem "minitest-reporters", group: :test
 gem "rufo"
 gem "bcrypt"
+gem "byebug"
+gem "gravatar_image_tag"
