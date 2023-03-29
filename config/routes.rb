@@ -1,12 +1,16 @@
 Rails.application.routes.draw do
+  #get "sessions/new"
   #get "users/new"
   root "staticpages#home"
-  #get "/home", to: "staticpages#home"
+  #get "/home",  to: "staticpages#home"
   get "/help", to: "staticpages#help"
   get "/about", to: "staticpages#about"
   get "/contact", to: "staticpages#contact"
   #get "/login", to: "staticpages#login"
-  get "/signup", to: 'users#new'
-  #get "/news", to: "staticpages#news"
+  get "/signup", to: "users#new"
+  #get "/news",  to: "staticpages#news"
+  get "/login", to: "sessions#new"
+  post "/login", to: "sessions#new", to: "sessions#create"
+  delete "/logout", to: "sessions#destroy"
   resources :users
 end
