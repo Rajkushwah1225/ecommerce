@@ -70,8 +70,7 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
-#gem 'sass-rails'
-gem "bootstrap-sass"
+
 gem "rails-controller-testing"
 gem "rubocop-rails", require: false
 
@@ -79,9 +78,10 @@ gem "guard"
 gem "minitest", group: :test
 gem "minitest-reporters", group: :test
 gem "rufo"
-gem "bcrypt"
+
 gem "byebug"
 gem "gravatar_image_tag"
 gem "jquery-rails"
-gem "bootstrap"
 gem "sassc-rails"
+gem 'bootstrap-sass', '3.3.7'
+gem "bcrypt"
