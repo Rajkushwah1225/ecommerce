@@ -85,3 +85,6 @@ gem "jquery-rails"
 gem "sassc-rails"
 gem 'bootstrap-sass', '3.3.7'
 gem "bcrypt"
+gem 'faker' 
+gem 'will_paginate'
+

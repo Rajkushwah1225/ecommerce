@@ -9,4 +9,7 @@
      page_title + " | " + base_title
     end
   end
+  def logged_in?
+    !current_user.nil?
+  end
 end
