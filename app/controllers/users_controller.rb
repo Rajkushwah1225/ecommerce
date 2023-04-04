@@ -20,7 +20,7 @@ class UsersController < ApplicationController
     if @user.save
       #log_in @user
       @user.send_activation_email
-      UserMailer.account_activation(@self).deliver_now
+      #UserMailer.account_activation(@self).deliver_now
       #flash[:success] = "Welcome to the Sample App!"
       flash[:info] = "Please check your email to activate your account."
       redirect_to root_url
@@ -69,8 +69,6 @@ class UsersController < ApplicationController
   def admin_user
     redirect_to(root_url) unless current_user.admin?
   end
-
-
 
   private
 
