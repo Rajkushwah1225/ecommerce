@@ -87,4 +87,8 @@ gem 'bootstrap-sass', '3.3.7'
 gem "bcrypt"
 gem 'faker' 
 gem 'will_paginate'
+gem 'importmap-rails'
+gem 'active_storage_validations', '0.8.2'
+gem 'image_processing', '1.9.3'
+gem 'mini_magick', '4.9.5'
 

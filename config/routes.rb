@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   #get "sessions/new"
   get "users/show"
   root "staticpages#home"
+  #get '/home',    to: 'static_pages#home', as: :home
   #get "/home",  to: "staticpages#home"
   get "/help", to: "staticpages#help"
   get "/about", to: "staticpages#about"
@@ -18,5 +19,5 @@ Rails.application.routes.draw do
   resources :users
   resources :account_activations, only: [:edit]
   resources :password_resets, only: [:new, :create, :edit, :update]
-  
+  resources :microposts, only: [:create, :destroy]
 end

@@ -18,19 +18,26 @@ User.create(name: "raj kushwah",
             password_confirmation: "123456",
             admin: true)
 
-for i in 2..100
-  User.create!(name: "raj#{i}", email: "raj#{i}@gmail.com", password: "password", password_confirmation: "password",
-               activated: false, activated_at: Time.zone.now)
+# for i in 2..100
+#   User.create!(name: "raj#{i}", email: "raj#{i}@gmail.com", password: "password", password_confirmation: "password",
+#                activated: false, activated_at: Time.zone.now)
+# end
+
+for n in 2..100
+  name = Faker::Name.name
+  email = "example-#{n + 1}@railstutorial.org"
+  password = "password"
+  User.create!(name: name,
+               email: email,
+               password: password,
+               password_confirmation: password,
+               activated: true ,
+               activated_at: Time.zone.now)
 end
 
-# for n in 2..100
-#   name = Faker::Name.name
-#   email = "example-#{n + 1}@railstutorial.org"
-#   password = "password"
-#   User.create!(name: name,
-#                email: email,
-#                password: password,
-#                password_confirmation: password,
-#                activated: true ,
-#                activated_at: Time.zone.now)
-# end
+# Generate microposts for a subset of users.
+users = User.order(:created_at).take(6)
+50.times do
+content = Faker::Lorem.sentence(word_count: 5)
+users.each { |user| user.microposts.create!(content: content) }
+end
